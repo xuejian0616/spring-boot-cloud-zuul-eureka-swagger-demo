@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,10 +25,10 @@ public class PaymentServerController {
     private OrderServiceClient orderServiceClient;
 
 
-    @RequestMapping("/payForSomething")
+    @RequestMapping("/payForSomething/{name}")
     @ApiOperation(value = "支付接口")
-    public String pay() {
-        return orderServiceClient.order("123");
+    public String pay(@PathVariable String name) {
+        return orderServiceClient.order(name);
 
     }
 }

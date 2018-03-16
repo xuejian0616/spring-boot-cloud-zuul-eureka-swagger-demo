@@ -24,6 +24,6 @@ public class OrderServerController {
     @ApiOperation(value = "下单")
     public ResponseMessage order(@RequestParam String name) {
         String resule = "hi "+name+",i am from port:" +port;
-        return new ResponseMessageBuilder().code(200).message("OrderService3-下单成功").build();
+        return new ResponseMessageBuilder().code(200).message("OrderService3-下单成功"+resule).build();
     }
 }
