@@ -13,7 +13,7 @@ import cn.xuhao.demo.paymentserver.client.OrderServiceClient;
 /**
  * @author: xuhao
  * @Description:
- * @Date：Created on 2018/3/815 18:14.
+ * @Date：Created on 2018/3/15 18:14.
  */
 @RestController
 @Api(tags = "支付系统接口", description = "支付系统模块相关接口")

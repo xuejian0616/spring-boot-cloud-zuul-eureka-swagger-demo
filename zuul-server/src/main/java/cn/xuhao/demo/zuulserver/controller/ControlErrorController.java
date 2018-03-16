@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author: xuhao
  * @Description:
- * @Date：Created on 2018/3/815 18:14.
+ * @Date：Created on 2018/3/15 18:14.
  */
 @RestController
 public class ControlErrorController implements ErrorController {
