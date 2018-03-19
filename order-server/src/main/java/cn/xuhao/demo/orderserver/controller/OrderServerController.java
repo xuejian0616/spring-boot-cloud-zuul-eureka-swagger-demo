@@ -15,7 +15,7 @@ import springfox.documentation.service.ResponseMessage;
  * @Date：Created on 2018/3/15 18:14.
  */
 @RestController
-@Api(tags = "订单系统接口", description = "订单系统模块相关接口")
+@Api(tags = "OrderServerController", description = "订单系统模块相关接口")
 public class OrderServerController {
     @Value("${server.port}")
     String port;
@@ -23,7 +23,7 @@ public class OrderServerController {
     @RequestMapping("/orderSomething")
     @ApiOperation(value = "下单")
     public ResponseMessage order(@RequestParam String name) {
-        String resule = "hi "+name+",i am from port:" +port;
+        String resule = "第"+name+"次请求,服务的端口为:" +port;
         return new ResponseMessageBuilder().code(200).message("OrderService1-下单成功"+resule).build();
     }
 }

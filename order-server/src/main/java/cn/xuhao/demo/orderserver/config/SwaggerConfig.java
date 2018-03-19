@@ -28,9 +28,9 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("w.m.vker.demo"))
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                .apis(RequestHandlerSelectors.basePackage("cn.xuhao.demo.orderserver.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -39,7 +39,6 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("订单系统api")
                 .description("订单系统接口文档说明")
-                .contact(new Contact("vker", "", "6492178@gmail.com"))
                 .version("1.0")
                 .build();
     }

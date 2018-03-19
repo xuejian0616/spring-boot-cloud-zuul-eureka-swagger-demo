@@ -26,6 +26,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- eureka的服务端添加eureka-server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
