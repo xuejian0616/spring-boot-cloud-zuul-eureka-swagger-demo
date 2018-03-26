@@ -2,10 +2,15 @@
 
 ### 简介
 1、使用spring-boot进行项目构建，使用spring-cloud进行服务化，使用eureka作为服务注册中心，使用zuul最为网关，并集成了swagger-UI用于API管理。
+
 2、项目有6个工程，包含eureka服务，zuul服务，三个order服务构成的集群，payment服务。
+
 3、payment服务不通过网关调用order服务集群。
+
 4、eureka的注册中心管理地址：http://localhost:8080/
+
 5、zuul的swagger接口管理地址：http://localhost:8081/swagger-ui.html 
+
 6、项目源码的github地址：https://github.com/xuejian0616/spring-boot-cloud-zuul-eureka-swagger-demo
 
 
